@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA — AI Chatbot</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ai-chatbot.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <div class="logo-orb"></div>
+    <div class="logo-text">NOVA</div>
+  </div>
+  <div class="status-badge">
+    <div class="status-dot"></div>
+    Online
+  </div>
+</header>
+
+<div class="mode-bar">
+  <button class="mode-pill active" data-mode="all"><span>⚡</span> All Modes</button>
+  <button class="mode-pill" data-mode="qa"><span>💬</span> Q&amp;A</button>
+  <button class="mode-pill" data-mode="knowledge"><span>🌍</span> Knowledge</button>
+  <button class="mode-pill" data-mode="calc"><span>🔢</span> Calculator</button>
+  <button class="mode-pill" data-mode="chat"><span>😊</span> Small Talk</button>
+</div>
+
+<div class="chat-area" id="chatArea">
+  <div class="welcome" id="welcomeScreen">
+    <h2>Hello, I'm NOVA ✦</h2>
+    <p>Your intelligent assistant — ask me anything or try a suggestion below.</p>
+    <div class="suggestion-grid">
+      <div class="suggestion-card" onclick="sendSuggestion('What is the speed of light?')">
+        <div class="s-icon">🌍</div>
+        <div class="s-title">General Knowledge</div>
+        <div class="s-sub">Speed of light?</div>
+      </div>
+      <div class="suggestion-card" onclick="sendSuggestion('Calculate 15% tip on a $48 dinner')">
+        <div class="s-icon">🔢</div>
+        <div class="s-title">Calculator</div>
+        <div class="s-sub">15% tip on $48?</div>
+      </div>
+      <div class="suggestion-card" onclick="sendSuggestion('Who invented the internet?')">
+        <div class="s-icon">💬</div>
+        <div class="s-title">Questions</div>
+        <div class="s-sub">Who invented the internet?</div>
+      </div>
+      <div class="suggestion-card" onclick="sendSuggestion('Tell me a fun fact to brighten my day!')">
+        <div class="s-icon">😊</div>
+        <div class="s-title">Small Talk</div>
+        <div class="s-sub">Brighten my day!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="input-area">
+  <div class="input-row">
+    <textarea id="userInput" placeholder="Ask anything — math, facts, small talk…" rows="1"></textarea>
+    <button class="send-btn" id="sendBtn" onclick="sendMessage()">➤</button>
+  </div>
+  <div class="input-hint">NOVA · Powered by Mahi · Press Enter to send</div>
+</div>
+
+<script src="ai-chatbot.js"></script>
+</body>
+</html>
