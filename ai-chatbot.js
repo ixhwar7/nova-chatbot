@@ -142,7 +142,7 @@ async function sendMessage() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': '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',
+        'x-api-key': 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,
         'anthropic-version': '2023-06-01',
         'anthropic-dangerous-direct-browser-access': 'true'
       },
