@@ -102,7 +102,7 @@ async function sendMessage() {
 
   } catch (err) {
     typingEl.remove();
-    addMessage('bot', '⚠ Connection issue. Please check your network and try again.', 'qa');
+    addMessage('bot', '⚠ Error: ' + err.message + ' | ' + JSON.stringify(err), 'qa');
   }
 
   isLoading = false;
