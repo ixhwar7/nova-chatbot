@@ -51,7 +51,7 @@ function createApiKeyBox() {
 
 function saveApiKey() {
   const key = document.getElementById('apiKeyInput').value.trim();
-  if (!key.startsWith('sk-ant-')) {
+  if (!key.startsWith('sk-')) {
     document.getElementById('apiKeyError').style.display = 'block';
     return;
   }
@@ -142,10 +142,10 @@ async function sendMessage() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': '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',
+        'x-api-key': apiKey,
         'anthropic-version': '2023-06-01',
         'anthropic-dangerous-direct-browser-access': 'true'
-      },
+      }
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 1000,
